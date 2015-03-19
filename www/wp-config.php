@@ -26,15 +26,17 @@ define('WP_CONTENT_DIR', CONTENT_DIR);
 define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
 
 
+
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'DB NAME');
+define('DB_NAME', 'wp_plugin');
 
 /** MySQL database username */
-define('DB_USER', 'USERNAME');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'PASSWORD');
+define('DB_PASSWORD', 'velocity');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -80,7 +82,7 @@ $table_prefix  = 'wp_';
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* That's all, stop editing! Happy blogging. */
 
