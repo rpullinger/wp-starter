@@ -1,0 +1,31 @@
+{
+    "name": "dev/test-project",
+    "authors": [
+        {
+            "name": "Richard Pullinger",
+            "email": "richard@velocitypartners.co.uk"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"http://wpackagist.org"
+        }
+    ],
+    "config" : {
+         "vendor-dir": "www/vendor"
+    },
+    "require": {
+        "johnpbloch/wordpress": "dev-master",
+        "composer/installers": "~1.0.12",
+        "wpackagist-plugin/advanced-custom-fields": "dev-trunk",
+        "wp-sync-db/wp-sync-db": "dev-master",
+	"jarednova/timber": "dev-master"
+    },
+    "extra": {
+        "installer-paths": {
+            "www/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+        },
+        "wordpress-install-dir": "www/wp"
+    }
+}
