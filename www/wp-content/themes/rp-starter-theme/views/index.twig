@@ -1,0 +1,7 @@
+{% block content %}
+    <h2>{{foo}}</h2>
+    <p>{{qux}}</p>
+    {% for post in posts %}
+        {% include ['tease.twig'] %}
+    {% endfor %}
+{% endblock %}
