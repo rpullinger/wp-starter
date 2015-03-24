@@ -1,9 +1,13 @@
-<article class="tease tease-{{post.post_type}}" id="tease-{{post.ID}}">
-    {% block content %}
-        <h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
-        <p>{{post.get_preview}}</p>
-        {% if post.get_thumbnail %}
-            <img src="{{post.thumbnail.src}}" />
-        {% endif %}
-    {% endblock %}
+<article class="trip-teaser">
+    <a href="{{post.link}}">
+        <p class="trip-teaser__image">
+            <img src="{{post.thumbnail.src}}" alt="{{post.thumbnail.alt}}">
+        </p>
+        <h2 class="trip-teaser__location">{{post.title}}</h2>
+        <h3 class="trip-teaser__country">{{ post.get_terms('country') | join }}</h3>
+        <p class="trip-teaser__date">
+            {{post.get_field('from') | date("jS M Y")}} – {{post.get_field('to') | date("jS M Y")}}
+        </p>
+        <p class="trip-teaser__strapline">{{post.get_field('strapline')}}</p>
+    </a>
 </article>

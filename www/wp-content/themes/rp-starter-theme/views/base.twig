@@ -16,27 +16,51 @@
     </head>
     <body>
 
-    <header>
-        <h1>
-            <a href="/" rel="home">{{site.name}}</a>
-        </h1>
+    <header class="header">
+        <div class="container">
+
+            <nav class="main-nav">
+                <a href="/about">About</a>
+                <a href="/">All Trips</a>
+            </nav>
+
+            <h1 class="header__logo">
+                <a href="/">
+                    {{site.name}}
+                </a>
+            </h1>
+        </div>
     </header>
 
-    <section id="content" role="main">
+    <main id="content" role="main">
         {% if title %}
         <h1>{{title}}</h1>
         {% endif %}
-        <div>
+        <section>
             {% block content %}
-            Sorry, no content
+            <p>Sorry, no content</p>
             {% endblock %}
-        </div>
-    </section>
+        </section>
+    </main>
 
 
-    <footer>
-
+    <footer class="footer">
+        <section class="footer__legal">
+            <div class="container">
+                <p class="footer__logo">
+                    <a href="/">{{ site.name }}</a>
+                </p>
+                <p class="main-nav">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/">Trips</a>
+                </p>
+                <p>Copyright &copy; {{ "now" | date("Y") }}.</p>
+            </div>
+        </section>
     </footer>
+
+
     {{ function('wp_footer') }}
 
     </body>

@@ -21,22 +21,20 @@
 $root_dir = dirname(__DIR__);
 $webroot_dir = $root_dir . '/www';
 
+define('WP_HOME', 'http://letsgetlost.dev:8080');
 define('CONTENT_DIR', $webroot_dir . '/wp-content');
 define('WP_CONTENT_DIR', CONTENT_DIR);
-define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
-
-
-
+define('WP_CONTENT_URL', WP_HOME . '/wp-content');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'wp_plugin');
+define('DB_NAME', 'wp_letsgetlost');
 
 /** MySQL database username */
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'velocity');
+define('DB_PASSWORD', 'richard');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -82,7 +80,7 @@ $table_prefix  = 'wp_';
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 
