@@ -17,6 +17,36 @@ class StarterSite extends TimberSite {
         add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
         add_action( 'init', array( $this, 'register_post_types' ) );
         add_action( 'init', array( $this, 'register_taxonomies' ) );
+
+        $args = array(
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+            'widgets'
+        );
+        add_theme_support( 'html5', $args );
+
+        add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+        add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+        function remove_width_attribute( $html ) {
+            $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+            return $html;
+        }
+
+        function html5_insert_image($html, $id, $caption, $title, $align, $url) {
+              $html5 = "<figure id='post-$id media-$id' class='align-$align'>";
+              $html5 .= "<img src='$url' alt='$title' />";
+              if ($caption) {
+                $html5 .= "<figcaption>$caption</figcaption>";
+            }
+            $html5 .= "</figure>";
+            return $html5;
+        }
+        add_filter( 'image_send_to_editor', 'html5_insert_image', 10, 9 );
+
         parent::__construct();
     }
 

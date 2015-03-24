@@ -12,23 +12,26 @@
         <meta name="description" content="{{site.description}}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <script src="//use.typekit.net/zqu2ehw.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+
+        <link rel="stylesheet" href="{{site.theme.link}}/css/main.css">
         {{function('wp_head')}}
     </head>
     <body>
 
     <header class="header">
         <div class="container">
-
-            <nav class="main-nav">
-                <a href="/about">About</a>
-                <a href="/">All Trips</a>
-            </nav>
-
             <h1 class="header__logo">
                 <a href="/">
                     {{site.name}}
                 </a>
             </h1>
+
+            <nav class="main-nav">
+                <a href="/about">About</a>
+                <a href="/">All Trips</a>
+            </nav>
         </div>
     </header>
 
@@ -49,11 +52,6 @@
             <div class="container">
                 <p class="footer__logo">
                     <a href="/">{{ site.name }}</a>
-                </p>
-                <p class="main-nav">
-                    <a href="/">Home</a>
-                    <a href="/about">About</a>
-                    <a href="/">Trips</a>
                 </p>
                 <p>Copyright &copy; {{ "now" | date("Y") }}.</p>
             </div>

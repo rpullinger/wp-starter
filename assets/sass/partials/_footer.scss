@@ -1,0 +1,126 @@
+.footer{
+    padding: $base-unit;
+    // padding-top: $base-unit * 2;
+    // background: #303030;
+    color: #ccc;
+    text-align: center;
+
+
+    &__sections{
+        //display: flex;
+        // justify-content: space-between;
+    }
+
+        &__section{
+            //flex: 1;
+            margin-bottom: $base-unit;
+            margin-left: $base-unit;
+
+            h3{
+                font-weight: bold;
+                text-transform: uppercase;
+                font-family: "proxima-nova", Helvetica, san-serif;
+                font-size: $f-small;
+                margin-bottom: $base-unit / 4;
+                color: #eee;
+            }
+
+            ul{
+                list-style: none;
+                padding: 0;
+            }
+
+            &:first-child{
+                flex: 2;
+                margin-left: 0;
+            }
+        }
+
+    &__legal{
+        //background: rgba(0, 0, 0, 0.2);
+        //color: rgba(255, 255, 255, 0.2);
+        //padding: $base-unit;
+
+        .container{
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+        }
+
+        // margin-left: -$base-unit;
+        // margin-right: -$base-unit;
+        // margin-bottom: -$base-unit;
+
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: "proxima-nova", Helvetica, san-serif;
+        font-size: $f-small;
+
+        p{
+            margin-bottom: 0;
+        }
+    }
+
+    &__logo{
+        text-transform: lowercase;
+        font-size: 22px;
+        font-family: "leitura-news", Georgia, serif;
+        font-weight: 700;
+        margin-bottom: $base-unit / 2;
+
+        -moz-font-feature-settings: "liga=1, dlig=1";
+        -ms-font-feature-settings: "liga", "dlig";
+        -webkit-font-feature-settings: "liga", "dlig";
+        -o-font-feature-settings: "liga", "dlig";
+        font-feature-settings: "liga", "dlig";
+    }
+
+    &__explore{
+        text-align: center;
+    }
+
+    &__countries{
+        font-size: $f-medium;
+        font-family: "leitura-news", Georgia, serif;
+        font-weight: 700;
+        margin-bottom: $base-unit * 2;
+        line-height: 1.2;
+
+        a{
+            color: #fff;
+        }
+
+        h3{
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: "proxima-nova", Helvetica, san-serif;
+            font-size: $f-small;
+            margin-bottom: $base-unit / 4;
+            color: rgba(255, 255, 255, 0.6);
+
+        }
+    }
+}
+
+
+
+
+
+.countries{
+    text-align: center;
+    font-size: $f-medium;
+    font-family: "leitura-news", Georgia, serif;
+    font-weight: 700;
+    margin-bottom: $base-unit;
+    line-height: 1.1;
+
+    -moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga", "dlig";
+    -webkit-font-feature-settings: "liga", "dlig";
+    -o-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig";
+
+    > *{
+        display: inline-block;
+    }
+}

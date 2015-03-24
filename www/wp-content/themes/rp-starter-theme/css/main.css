@@ -1,0 +1,325 @@
+/**
+ * richardpullinger.com
+ */
+/**
+ * Variables
+ */
+/**
+ * Mixins
+ */
+/*
+Super simple Mixin for the responsive stuff
+ */
+/**
+ * BASE
+ */
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff; }
+
+h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .g {
+  margin-top: 0;
+  margin-bottom: 24px; }
+  h1:last-child, h1.last, h2:last-child, h2.last, h3:last-child, h3.last, h4:last-child, h4.last, h5:last-child, h5.last, h6:last-child, h6.last, hgroup:last-child, hgroup.last, ul:last-child, ul.last, ol:last-child, ol.last, dl:last-child, dl.last, blockquote:last-child, blockquote.last, p:last-child, p.last, address:last-child, address.last, table:last-child, table.last, fieldset:last-child, fieldset.last, figure:last-child, figure.last, pre:last-child, pre.last, .g:last-child, .g.last {
+    margin-bottom: 0; }
+
+img {
+  vertical-align: bottom;
+  max-width: 100%; }
+
+a img {
+  border: 0; }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto; }
+
+/**
+ * TYPOGRAPHY
+ */
+body {
+  font-family: "proxima-nova", Helvetica, san-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #111; }
+
+a {
+  color: currentColor;
+  text-decoration: none; }
+  a:hover {
+    color: currentColor; }
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  line-height: 1.1;
+  font-family: "leitura-news", Georgia, serif;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig"; }
+
+h1 {
+  font-size: 46px; }
+
+h2 {
+  font-size: 36px; }
+
+h3 {
+  font-size: 16px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 16px; }
+
+h6 {
+  font-size: 16px; }
+
+blockquote {
+  margin: 24px;
+  padding: 0;
+  line-height: 1.3;
+  font-family: "leitura-news", Georgia, serif;
+  font-size: 27px;
+  font-style: italic;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto; }
+
+/**
+ * Grid
+ */
+.g {
+  margin-top: -24px;
+  margin-left: -24px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap; }
+
+.gi {
+  padding-top: 24px;
+  padding-left: 24px;
+  display: block;
+  flex-basis: 0 0 33.33%; }
+
+/**
+ * Widths
+ */
+.one-half {
+  width: 50%; }
+
+.one-third {
+  width: 33.33333%; }
+
+.two-thirds {
+  width: 66.66666%; }
+
+.one-quarter {
+  width: 25%; }
+
+.three-quarters {
+  width: 75%; }
+
+.one-fifth {
+  width: 20%; }
+
+.two-fifths {
+  width: 40%; }
+
+.three-fifths {
+  width: 60%; }
+
+.four-fifths {
+  width: 80%; }
+
+.one-sixth {
+  width: 16.66666%; }
+
+.two-sixths {
+  width: 33.33333%; }
+
+.four-sixths {
+  width: 66.66666%; }
+
+.five-sixths {
+  width: 83.33333%; }
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: 2px solid;
+  font-weight: 700;
+  letter-spacing: 0.15em; }
+
+/**
+ * HEADER
+ */
+.header {
+  padding-top: 24px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 48px; }
+  .header__logo {
+    font-size: 46px;
+    font-family: "leitura-news", Georgia, serif;
+    font-weight: 700;
+    margin-bottom: 12px;
+    -moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga", "dlig";
+    -webkit-font-feature-settings: "liga", "dlig";
+    -o-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig"; }
+
+.main-nav a {
+  display: inline-block;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px; }
+
+.footer {
+  padding: 24px;
+  color: #ccc;
+  text-align: center; }
+  .footer__section {
+    margin-bottom: 24px;
+    margin-left: 24px; }
+    .footer__section h3 {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: "proxima-nova", Helvetica, san-serif;
+      font-size: 12px;
+      margin-bottom: 6px;
+      color: #eee; }
+    .footer__section ul {
+      list-style: none;
+      padding: 0; }
+    .footer__section:first-child {
+      flex: 2;
+      margin-left: 0; }
+  .footer__legal {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "proxima-nova", Helvetica, san-serif;
+    font-size: 12px; }
+    .footer__legal p {
+      margin-bottom: 0; }
+  .footer__logo {
+    text-transform: lowercase;
+    font-size: 22px;
+    font-family: "leitura-news", Georgia, serif;
+    font-weight: 700;
+    margin-bottom: 12px;
+    -moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga", "dlig";
+    -webkit-font-feature-settings: "liga", "dlig";
+    -o-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig"; }
+  .footer__explore {
+    text-align: center; }
+  .footer__countries {
+    font-size: 36px;
+    font-family: "leitura-news", Georgia, serif;
+    font-weight: 700;
+    margin-bottom: 48px;
+    line-height: 1.2; }
+    .footer__countries a {
+      color: #fff; }
+    .footer__countries h3 {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: "proxima-nova", Helvetica, san-serif;
+      font-size: 12px;
+      margin-bottom: 6px;
+      color: rgba(255, 255, 255, 0.6); }
+
+.countries {
+  text-align: center;
+  font-size: 36px;
+  font-family: "leitura-news", Georgia, serif;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig"; }
+  .countries > * {
+    display: inline-block; }
+
+.trip-teaser {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px; }
+  .trip-teaser__image {
+    margin-bottom: 12px; }
+  .trip-teaser__location {
+    font-size: 46px;
+    margin-bottom: 6px; }
+  .trip-teaser__country {
+    order: -1;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "proxima-nova", Helvetica, san-serif;
+    font-size: 12px;
+    margin-bottom: 6px; }
+  .trip-teaser__date {
+    margin-bottom: 12px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold; }
+
+.trips {
+  margin-bottom: 48px; }
+
+.trip__main-image {
+  margin-bottom: 24px; }
+.trip__header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 96px; }
+.trip__location {
+  font-size: 80px;
+  margin-bottom: 6px; }
+.trip__country {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "proxima-nova", Helvetica, san-serif;
+  font-size: 16px;
+  margin-bottom: 6px;
+  position: relative; }
+  .trip__country:after {
+    content: '';
+    background: url(usa.svg) no-repeat top center;
+    background-size: contain;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    max-width: 70%;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -20%); }
+.trip__date {
+  margin-bottom: 12px;
+  font-style: italic;
+  font-weight: bold; }
+.trip__content {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+  .trip__content > p {
+    max-width: 600px; }

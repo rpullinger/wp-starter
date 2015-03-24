@@ -1,0 +1,20 @@
+/**
+ * Grid
+ */
+
+.g{
+    margin-top: -$base-unit;
+    margin-left: -$base-unit;
+    overflow: hidden;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .gi{
+        padding-top: $base-unit;
+        padding-left: $base-unit;
+        display: block;
+        //flex: 1;
+        flex-basis:0 0 33.33%;
+    }

@@ -1,0 +1,9 @@
+.btn{
+    display: inline-block;
+    padding: $base-unit / 4 $base-unit / 2;
+    font-size: $f-small;
+    text-transform: uppercase;
+    border: 2px solid;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
