@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4f34a8b2373863fb8b3ef7d00961a4b4",
+    "hash": "d466948d8545bef45f4195a9f217f557",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -264,12 +264,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "2fd4b7d4139d995ae43b2ba944efff0a85e0110b"
+                "reference": "a938e594723a82dcb978d8f15179932f03162569"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/2fd4b7d4139d995ae43b2ba944efff0a85e0110b",
-                "reference": "2fd4b7d4139d995ae43b2ba944efff0a85e0110b",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/a938e594723a82dcb978d8f15179932f03162569",
+                "reference": "a938e594723a82dcb978d8f15179932f03162569",
                 "shasum": ""
             },
             "require": {
@@ -293,7 +293,7 @@
                 "blog",
                 "cms"
             ],
-            "time": "2015-03-19 07:16:56"
+            "time": "2015-03-28 02:18:03"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -500,6 +500,26 @@
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields/",
             "time": "2015-03-18 04:46:15"
+        },
+        {
+            "name": "wpackagist-plugin/taxonomy-meta",
+            "version": "1.2",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/taxonomy-meta/",
+                "reference": "tags/1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/taxonomy-meta.1.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/taxonomy-meta/"
         }
     ],
     "packages-dev": [],

@@ -7,15 +7,20 @@
                 <p class="trip__featured-image">
                     <img src="{{post.thumbnail.src}}" alt="{{post.thumbnail.alt}}">
                 </p>
-                <h2 class="trip__country">{{ post.get_terms('country') | join }}</h2>
-                <h1 class="trip__location">{{post.title}}</h1>
-                <p class="trip__date">
-                    {{post.get_field('from') | date("jS F Y")}} &mdash; {{post.get_field('to') | date("jS F Y")}}
-                </p>
-                <p class="trip__strapline">{{post.get_field('strapline')}}</p>
+                <div class="trip__info-wrapper">
+                    <div class="trip__country-outline">{{country_outline}}</div>
+                    <div class="trip__info">
+                        <h2 class="trip__country">{{ post.get_terms('country') | join }}</h2>
+                        <h1 class="trip__location">{{post.title}}</h1>
+                        <p class="trip__date">
+                            {{post.get_field('from') | date("jS F Y")}} &mdash; {{post.get_field('to') | date("jS F Y")}}
+                        </p>
+                    </div>
+                </div>
             </header>
 
             <div class="trip__content">
+                <p class="trip__strapline">{{post.get_field('strapline')}}</p>
                 {{post.content}}
 
             </div>

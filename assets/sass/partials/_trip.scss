@@ -7,9 +7,48 @@
         margin-bottom: $base-unit * 4;
     }
 
+        &__info-wrapper{
+            position: relative;
+        }
+
+        &__info{
+            z-index: 100;
+            position: relative;
+
+            text-shadow: 1px 1px #fff,
+                        1px -1px #fff,
+                        -1px -1px #fff,
+                        -1px 1px #fff;
+            // -webkit-text-stroke: 1px  #fff;
+
+        }
+
+        &__country-outline{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            right: 0;
+            transform: translate(-50%, 20%);
+            opacity: 1;
+            width: 100%;
+            max-width: 35rem;
+            //z-index: -1000;
+            pointer-events: none;
+
+
+            svg path,
+            svg line{
+                stroke: #000;
+                fill: red;
+                stroke-width: 20px;
+            }
+        }
+
         &__location{
             font-size: $f-xlarge;
             margin-bottom: $base-unit / 4;
+            padding: 0 5px;
+            line-height: 1;
         }
 
         &__country{
@@ -17,29 +56,21 @@
             text-transform: uppercase;
             font-family: "proxima-nova", Helvetica, san-serif;
             font-size: $f-base;
-            margin-bottom: $base-unit / 4;
-            position: relative;
-
-            &:after{
-                content: '';
-                background: url(usa.svg) no-repeat top center;
-                background-size: contain;
-                position: absolute;
-                width: 500px;
-                height: 500px;
-                max-width: 70%;
-                left: 50%;
-                top: 0%;
-                transform: translate(-50%, -20%);
-            }
+            margin-bottom: 0;
+            font-size: $f-regular;
+            line-height: 1;
         }
 
         &__date{
             margin-bottom: $base-unit / 2;
             font-weight: bold;
+            font-size: $f-regular;
         }
 
-        &__strapline{}
+        &__strapline{
+            font-size: $f-regular;
+            // font-weight: bold;
+        }
 
 
         &__content{

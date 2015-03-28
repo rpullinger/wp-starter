@@ -66,6 +66,17 @@ class StarterSite extends TimberSite {
         }
         add_filter('tiny_mce_before_init', 'wpa_45815');
 
+        function cc_mime_types($mimes) {
+            $mimes['svg'] = 'image/svg+xml';
+            return $mimes;
+        }
+        add_filter('upload_mimes', 'cc_mime_types');
+
+        function wptp_add_categories_to_attachments() {
+            register_taxonomy_for_object_type( 'category', 'attachment' );
+        }
+        add_action( 'init' , 'wptp_add_categories_to_attachments' );
+
         parent::__construct();
 
     }
@@ -75,9 +86,8 @@ class StarterSite extends TimberSite {
     }
 
     function register_taxonomies() {
-        //this is where you can register custom taxonomies
 
-        register_taxonomy('country', 'post', array(
+        register_taxonomy('country', array('attachment', 'post'), array(
 
             'hierarchical' => true,
             'labels' => array(
@@ -101,7 +111,7 @@ class StarterSite extends TimberSite {
             )
         ));
 
-        register_taxonomy('trips', 'post', array(
+        register_taxonomy('trips', array('attachment', 'post'), array(
 
             'hierarchical' => true,
             'labels' => array(

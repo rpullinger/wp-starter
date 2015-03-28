@@ -40,6 +40,10 @@ a img {
   margin: 0 auto;
   padding: 0 24px; }
 
+svg {
+  max-width: 100%;
+  height: auto; }
+
 /**
  * TYPOGRAPHY
  */
@@ -66,7 +70,8 @@ a {
 h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1.1;
-  font-family: "leitura-news", Georgia, serif; }
+  font-family: "leitura-news", Georgia, serif;
+  word-break: break-all; }
 
 h1 {
   font-size: 46px; }
@@ -323,30 +328,45 @@ blockquote {
   .trip__header {
     text-align: center;
     margin-bottom: 96px; }
+  .trip__info-wrapper {
+    position: relative; }
+  .trip__info {
+    z-index: 100;
+    position: relative;
+    text-shadow: 1px 1px #fff, 1px -1px #fff, -1px -1px #fff, -1px 1px #fff; }
+  .trip__country-outline {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    transform: translate(-50%, 20%);
+    opacity: 1;
+    width: 100%;
+    max-width: 35rem;
+    pointer-events: none; }
+    .trip__country-outline svg path, .trip__country-outline svg line {
+      stroke: #000;
+      fill: red;
+      stroke-width: 20px; }
   .trip__location {
     font-size: 80px;
-    margin-bottom: 6px; }
+    margin-bottom: 6px;
+    padding: 0 5px;
+    line-height: 1; }
   .trip__country {
     font-weight: bold;
     text-transform: uppercase;
     font-family: "proxima-nova", Helvetica, san-serif;
     font-size: 16px;
-    margin-bottom: 6px;
-    position: relative; }
-    .trip__country:after {
-      content: '';
-      background: url(usa.svg) no-repeat top center;
-      background-size: contain;
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      max-width: 70%;
-      left: 50%;
-      top: 0%;
-      transform: translate(-50%, -20%); }
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 1; }
   .trip__date {
     margin-bottom: 12px;
-    font-weight: bold; }
+    font-weight: bold;
+    font-size: 20px; }
+  .trip__strapline {
+    font-size: 20px; }
   .trip__content {
     margin: 0 auto; }
     .trip__content > * {
