@@ -28,24 +28,37 @@ class StarterSite extends TimberSite {
         );
         add_theme_support( 'html5', $args );
 
-        add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
-        add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
 
-        function remove_width_attribute( $html ) {
-            $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
-            return $html;
-        }
+        add_editor_style();
 
-        function html5_insert_image($html, $id, $caption, $title, $align, $url) {
-              $html5 = "<figure id='post-$id media-$id' class='align-$align'>";
-              $html5 .= "<img src='$url' alt='$title' />";
-              if ($caption) {
-                $html5 .= "<figcaption>$caption</figcaption>";
+        // Figures round images on upload
+        function html5_insert_image($html, $id, $caption, $title, $align, $url, $size, $alt) {
+            $html5 = "<figure class='trip__image trip__image--$size trip__image--align-$align'>";
+            $html5 .= "<img src='$url' alt='$alt' />";
+            if ($caption) {
+                $html5 .= "<figcaption class='trip__image-caption'>$caption</figcaption>";
             }
             $html5 .= "</figure>";
             return $html5;
         }
         add_filter( 'image_send_to_editor', 'html5_insert_image', 10, 9 );
+
+        function wrap_gallery( $output, $atts, $content = false, $tag = false ) {
+            if (!isset($atts['columns'])){
+                $atts['columns'] = 3;
+            }
+
+            $output = "<div class='gallery-wrap gallery-size-" . $atts['size'] . "'><div class='gallery gallery-columns-" . $atts['columns'] . "'>";
+            $ids = explode(',', $atts['ids']);
+            foreach($ids as $image){
+                $output .= '<div class="gallery-item">';
+                $output .= wp_get_attachment_image( $image, $atts['size'] );
+                $output .= '</div>';
+            }
+            $output .= '</div></div>';
+            return $output;
+        }
+        add_filter( 'post_gallery', 'wrap_gallery', 10, 4 );
 
         parent::__construct();
     }

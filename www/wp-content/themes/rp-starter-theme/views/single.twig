@@ -1,25 +1,23 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    <div class="container">
-        <article class="trip" id="post-{{post.ID}}">
-            <section>
-                <header class="trip__header">
-                    <p class="trip__featured-image">
-                        <img src="{{post.thumbnail.src}}" alt="{{post.thumbnail.alt}}">
-                    </p>
-                    <h2 class="trip__country">{{ post.get_terms('country') | join }}</h2>
-                    <h1 class="trip__location">{{post.title}}</h1>
-                    <p class="trip__date">
-                        {{post.get_field('from') | date("jS M Y")}} – {{post.get_field('to') | date("jS M Y")}}
-                    </p>
-                    <p class="trip__strapline">{{post.get_field('strapline')}}</p>
-                </header>
+    <article class="trip" id="post-{{post.ID}}">
+        <section>
+            <header class="trip__header">
+                <p class="trip__featured-image">
+                    <img src="{{post.thumbnail.src}}" alt="{{post.thumbnail.alt}}">
+                </p>
+                <h2 class="trip__country">{{ post.get_terms('country') | join }}</h2>
+                <h1 class="trip__location">{{post.title}}</h1>
+                <p class="trip__date">
+                    {{post.get_field('from') | date("jS M Y")}} – {{post.get_field('to') | date("jS M Y")}}
+                </p>
+                <p class="trip__strapline">{{post.get_field('strapline')}}</p>
+            </header>
 
-                <div class="trip__content">
-                    {{post.content}}
-                </div>
-            </section>
-        </article>
-    </div>
+            <div class="trip__content">
+                {{post.content}}
+            </div>
+        </section>
+    </article>
 {% endblock %}

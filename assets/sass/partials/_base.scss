@@ -44,6 +44,7 @@ pre,
 img{
     vertical-align: bottom;
     max-width: 100%;
+    height: auto;
 }
 
 
@@ -60,6 +61,7 @@ a{
 
 
 .container{
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 0 $base-unit;
 }

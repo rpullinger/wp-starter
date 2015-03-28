@@ -1,20 +1,11 @@
 .trip{
-    // max-width: 1000px;
-    //padding: $base-unit;
 
-
-    &__intro-header{
-        // display: flex;
-    }
-
-        &__main-image{
-            // width: 50%;
-            margin-bottom: $base-unit;
-        }
+    padding-left: $base-unit;
+    padding-right: $base-unit;
 
     &__header{
-        display: flex;
-        flex-direction: column;
+        //display: flex;
+        //flex-direction: column;
         text-align: center;
         margin-bottom: $base-unit * 4;
     }
@@ -25,7 +16,6 @@
         }
 
         &__country{
-            //order: -1;
             font-weight: bold;
             text-transform: uppercase;
             font-family: "proxima-nova", Helvetica, san-serif;
@@ -49,34 +39,40 @@
 
         &__date{
             margin-bottom: $base-unit / 2;
-            // font-size: 12px;
             font-style: italic;
             font-weight: bold;
         }
 
-        &__strapline{
+        &__strapline{}
 
-        }
-
-        &__intro-content{
-            // -webkit-column-count: 2;
-
-            p{
-                //-webkit-column-break-inside: avoid;
-            }
-        }
 
         &__content{
-            // max-width: 600px;
             margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
+            //display: flex;
+            //flex-direction: row;
+            //flex-wrap: wrap;
+            //align-items: center;
+            //justify-content: center;
 
-            > p{
-                max-width: 600px;
+            > *{
+                max-width: 35em;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
+
+        &__image{
+            padding: 0;
+
+            &--thumbnail{ max-width: 35em; }
+            &--medium{ max-width: 35em; }
+            &--large{ max-width: 47em; }
+            &--full{ max-width: 100%; }
+        }
+
+            &__image-caption{
+                color: #aaa;
+                font-size: $f-small;
+                margin-top: $base-unit / 4;
+            }
 }
