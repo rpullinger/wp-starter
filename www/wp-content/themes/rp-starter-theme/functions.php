@@ -60,7 +60,14 @@ class StarterSite extends TimberSite {
         }
         add_filter( 'post_gallery', 'wrap_gallery', 10, 4 );
 
+        function wpa_45815($arr){
+            $arr['block_formats'] = 'Heading=h3;Sub-Heading=h4;Paragraph=p;';
+            return $arr;
+        }
+        add_filter('tiny_mce_before_init', 'wpa_45815');
+
         parent::__construct();
+
     }
 
     function register_post_types() {
