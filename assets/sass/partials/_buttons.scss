@@ -1,9 +1,12 @@
 .btn{
     display: inline-block;
-    padding: $base-unit / 4 $base-unit / 2;
-    font-size: $f-small;
-    text-transform: uppercase;
+    padding: $base-unit / 2;
+    font-size: $f-base;
+    // text-transform: uppercase;
     border: 2px solid;
     font-weight: 700;
-    letter-spacing: 0.15em;
+    // letter-spacing: 0.1em;
+    line-height: 1;
+    font-family: "leitura-news", Georgia, serif;
+    background: #fff;
 }

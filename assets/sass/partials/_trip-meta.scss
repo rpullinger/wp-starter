@@ -1,0 +1,57 @@
+.trip-meta{
+    border: 2px solid;
+    text-align: center;
+    background: #fff;
+
+    color: #000;
+
+    &:hover{
+        opacity: 1;
+    }
+
+    &__title{
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: "proxima-nova", Helvetica, san-serif;
+        font-size: $f-small;
+        margin-bottom: 0;
+        border-bottom: 2px solid;
+        padding: $base-unit / 2;
+        line-height: 1;
+    }
+
+    &__image{
+        border-bottom: 2px solid;
+    }
+
+    &__box{
+        border-bottom: 2px solid;
+        padding: $base-unit / 2;
+    }
+
+    &__location{
+        margin-bottom: $base-unit / 4;
+        font-family: "leitura-news", Georgia, serif;
+        font-size: $f-medium;
+        margin-bottom: 0;
+        line-height: 1.1;
+        font-weight: bold;
+    }
+
+    &__country{
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: "proxima-nova", Helvetica, san-serif;
+        font-size: $f-small;
+        margin-bottom: 0;
+        line-height: 1.1;
+        font-weight: bold;
+    }
+
+    &__date{
+        margin-bottom: 0;
+        font-size: 12px;
+        font-weight: bold;
+        padding: $base-unit / 2;
+    }
+}

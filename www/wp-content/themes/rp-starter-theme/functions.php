@@ -100,6 +100,30 @@ class StarterSite extends TimberSite {
                 'hierarchical' => true
             )
         ));
+
+        register_taxonomy('trips', 'post', array(
+
+            'hierarchical' => true,
+            'labels' => array(
+                'name' => _x( 'Trips', 'taxonomy general name' ),
+                'singular_name' => _x( 'Trip', 'taxonomy singular name' ),
+                'search_items' =>  __( 'Search Trips' ),
+                'all_items' => __( 'All Trips' ),
+                'parent_item' => __( 'Parent Trip' ),
+                'parent_item_colon' => __( 'Parent Trip:' ),
+                'edit_item' => __( 'Edit Trip' ),
+                'update_item' => __( 'Update Trip' ),
+                'add_new_item' => __( 'Add New Trip' ),
+                'new_item_name' => __( 'New Trip Name' ),
+                'menu_name' => __( 'Trips' ),
+            ),
+
+            'rewrite' => array(
+                'slug' => 'trips',
+                'with_front' => false,
+                'hierarchical' => false
+            )
+        ));
     }
 
     function add_to_context( $context ) {

@@ -9,12 +9,13 @@
 
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
     .gi{
         padding-top: $base-unit;
         padding-left: $base-unit;
         display: block;
-        //flex: 1;
-        flex-basis:0 0 33.33%;
+        flex: 0 0 50%;
     }

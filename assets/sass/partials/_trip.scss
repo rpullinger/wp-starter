@@ -36,7 +36,6 @@
 
         &__date{
             margin-bottom: $base-unit / 2;
-            font-style: italic;
             font-weight: bold;
         }
 
@@ -70,5 +69,16 @@
 
         blockquote{
             max-width: 47rem;
+        }
+
+        footer{
+            margin-top: $base-unit * 2;
+            background: #eeeeee;
+            padding: $base-unit;
+        }
+
+        &__footer{
+            max-width: 35em;
+            margin: 0 auto;
         }
 }
