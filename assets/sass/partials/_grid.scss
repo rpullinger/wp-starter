@@ -13,6 +13,10 @@
     justify-content: center;
 }
 
+    .g--reverse{
+        flex-direction: row-reverse;
+    }
+
     .gi{
         padding-top: $base-unit;
         padding-left: $base-unit;

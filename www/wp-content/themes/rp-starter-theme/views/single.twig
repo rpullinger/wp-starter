@@ -23,16 +23,20 @@
                 <!-- <p class="trip__strapline">{{post.get_field('strapline')}}</p> -->
                 {{post.content}}
 
+                <div class="trip__footer-meta">
+                    <p> Posted on {{post.date | date("j\\<\\s\\u\\p\\>S<\\/\\s\\u\\p\\> F Y") }} by {{ post.author }}. {{post.get_field('footer_info')}}.</p>
+                </div>
+
             </div>
             <footer>
+
                 <div class="trip__footer">
-                    <div class="g">
+                    <div class="g g--reverse">
                         {% if post.next %}
                         <div class="gi">
-                            <h4>Next</h4>
                             <div class="trip-meta">
                                 <a href="{{post.next.link}}">
-                                    <h3 class="trip-meta__title">{{ post.next.get_terms('country') | join }}</h3>
+                                    <h3 class="trip-meta__title">{{ post.next.get_terms('country') | join }} →</h3>
                                     <img class="trip-meta__image" src="{{post.next.thumbnail.src('medium')}}" alt="{{post.next.thumbnail.alt}}">
                                     <div class="trip-meta__box">
                                         <div class="trip-meta--info">
@@ -46,10 +50,9 @@
                         {% endif %}
                         {% if post.prev %}
                         <div class="gi">
-                            <h4>Previous</h4>
                             <div class="trip-meta">
                                 <a href="{{post.prev.link}}">
-                                    <h3 class="trip-meta__title">{{ post.prev.get_terms('country') | join }}</h3>
+                                    <h3 class="trip-meta__title">← {{ post.prev.get_terms('country') | join }}</h3>
                                     <img class="trip-meta__image" src="{{post.prev.thumbnail.src('medium')}}" alt="{{post.prev.thumbnail.alt}}">
                                     <div class="trip-meta__box">
                                         <div class="trip-meta--info">

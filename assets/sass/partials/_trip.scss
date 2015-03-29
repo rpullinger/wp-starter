@@ -130,6 +130,42 @@
             max-width: 47rem;
         }
 
+        &__footer-meta{
+            //font-size: $f-small;
+            text-align: center;
+            color: #aaa;
+            padding-top: $base-unit;
+            padding-bottom: $base-unit;
+
+            max-width: 32rem;
+            position: relative;
+            margin-top: $base-unit * 4;
+            margin-bottom: $base-unit * 4;
+            //font-weight: bold;
+            font-style: italic;
+            font-style: 16px;
+
+            p{
+                // margin-bottom: $base-unit / 2;
+            }
+
+            &:before,
+            &:after{
+                content: '';
+                width: 10em;
+                border-top: 2px solid;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &:after{
+                top: auto;
+                bottom: 0;
+            }
+        }
+
         footer{
             //background: #eeeeee;
             // padding: $base-unit;
