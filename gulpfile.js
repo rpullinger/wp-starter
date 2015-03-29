@@ -17,14 +17,14 @@ gulp.task('sass', function () {
 });
 
 gulp.task('deploy', function() {
-    return gulp.src('www/wp-content/+(themes|plugins)/**/*')
+    return gulp.src('www/wp-content/themes/**/*')
         .pipe(ghPages({
             branch: 'staging'
         }));
 });
 
 gulp.task('deploy-production', function() {
-    return gulp.src('www/wp-content/(themes|plugins)/**/*')
+    return gulp.src('www/wp-content/themes/**/*')
         .pipe(ghPages({
             branch: 'production'
         }));

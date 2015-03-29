@@ -13,7 +13,7 @@
                         <h2 class="trip__country">{{ post.get_terms('country') | join }}</h2>
                         <h1 class="trip__location">{{post.title}}</h1>
                         <p class="trip__date">
-                            {{post.get_field('from') | date("jS F Y")}} &mdash; {{post.get_field('to') | date("jS F Y")}}
+                            {{post.get_field('from') | date("j\\<\\s\\u\\p\\>S<\\/\\s\\u\\p\\> F Y")}} &mdash; {{post.get_field('to') | date("j\\<\\s\\u\\p\\>S<\\/\\s\\u\\p\\> F Y")}}
                         </p>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                                             <div class="trip-meta__location">{{post.next.title}}</div>
                                         </div>
                                     </div>
-                                    <p class="trip-meta__date">{{post.next.get_field('from') | date("jS F Y")}} &mdash; {{post.next.get_field('to') | date("jS F Y")}}</p>
+                                    <p class="trip-meta__date">{{post.next.get_field('from') | date("j\\<\\s\\u\\p\\>S<\\/\\s\\u\\p\\> F Y")}} &mdash; {{post.next.get_field('to') | date("j\\<\\s\\u\\p\\>S<\\/\\s\\u\\p\\> F Y")}}</p>
                                 </a>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                                             <div class="trip-meta__location">{{post.prev.title}}</div>
                                         </div>
                                     </div>
-                                    <p class="trip-meta__date">{{post.prev.get_field('from') | date("jS F Y")}} &mdash; {{post.prev.get_field('to') | date("jS F Y")}}</p>
+                                    <p class="trip-meta__date">{{post.prev.get_field('from') | date("j\\<\\s\\u\\p\\>S<\\/\\s\\u\\p\\> F Y")}} &mdash; {{post.prev.get_field('to') | date("j\\<\\s\\u\\p\\>S<\\/\\s\\u\\p\\> F Y")}}</p>
                                 </a>
                             </div>
                         </div>
