@@ -6,7 +6,7 @@
         <h2 class="trip-teaser__location">{{post.title}}</h2>
         <h3 class="trip-teaser__country">{{ post.get_terms('country') | join }}</h3>
         <p class="trip-teaser__date">
-            {{post.get_field('from') | date("jS M Y")}} – {{post.get_field('to') | date("jS M Y")}}
+            {{post.get_field('from') | date("j\\<\\s\\u\\p\\>S<\\/\\s\\u\\p\\> F Y")}} – {{post.get_field('to') | date("j\\<\\s\\u\\p\\>S<\\/\\s\\u\\p\\> F Y")}}
         </p>
         <!-- <p class="trip-teaser__strapline">{{post.get_field('strapline')}}</p> -->
     </a>
