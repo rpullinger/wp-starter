@@ -1,0 +1,71 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <article class="trip" id="post-{{post.ID}}">
+        <section>
+            <header class="trip__header">
+                <p class="trip__featured-image">
+                    <img src="{{post.thumbnail.src('full')}}" alt="{{post.thumbnail.alt}}">
+                </p>
+                <div class="trip__info-wrapper">
+                    <div class="trip__country-outline">{{country_outline}}</div>
+                    <div class="trip__info">
+                        <h2 class="trip__country">{{ post.get_terms('country') | join }}</h2>
+                        <h1 class="trip__location">{{post.title}}</h1>
+                        <p class="trip__date">
+                            {{post.get_field('from') | date("jS F Y")}} &mdash; {{post.get_field('to') | date("jS F Y")}}
+                        </p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="trip__content">
+                <!-- <p class="trip__strapline">{{post.get_field('strapline')}}</p> -->
+                {{post.content}}
+
+            </div>
+            <footer>
+                <div class="trip__footer">
+                    <h2>Related trips</h2>
+                    <div class="g">
+                        {% if post.next %}
+                        <div class="gi">
+                            <div class="trip-meta">
+                                <a href="{{post.next.link}}">
+                                    <h3 class="trip-meta__title">{{ post.next.get_terms('country') | join }}</h3>
+                                    <img class="trip-meta__image" src="{{post.next.thumbnail.src('medium')}}" alt="{{post.next.thumbnail.alt}}">
+                                    <div class="trip-meta__box">
+                                        <div class="trip-meta--info">
+                                            <div class="trip-meta__location">{{post.next.title}}</div>
+                                        </div>
+                                    </div>
+                                    <p class="trip-meta__date">{{post.next.get_field('from') | date("jS F Y")}} &mdash; {{post.next.get_field('to') | date("jS F Y")}}</p>
+                                </a>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% if post.prev %}
+                        <div class="gi">
+                            <div class="trip-meta">
+                                <a href="{{post.prev.link}}">
+                                    <h3 class="trip-meta__title">{{ post.prev.get_terms('country') | join }}</h3>
+                                    <img class="trip-meta__image" src="{{post.prev.thumbnail.src('medium')}}" alt="{{post.prev.thumbnail.alt}}">
+                                    <div class="trip-meta__box">
+                                        <div class="trip-meta--info">
+                                            <div class="trip-meta__location">{{post.prev.title}}</div>
+                                        </div>
+                                    </div>
+                                    <p class="trip-meta__date">{{post.prev.get_field('from') | date("jS F Y")}} &mdash; {{post.prev.get_field('to') | date("jS F Y")}}</p>
+                                </a>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                    <p class="text-center">
+                        <a href="/" class="btn">View all trips</a>
+                    </p>
+                </div>
+            </footer>
+        </section>
+    </article>
+{% endblock %}

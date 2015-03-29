@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="container">
+        <article id="post-{{post.ID}}" class="page">
+            <section class="page__content">
+                {% if (post.thumbnail) %}
+                <p class="page__featured-image">
+                    <img src="{{post.thumbnail.src('full')}}" alt="{{post.thumbnail.alt}}">
+                </p>
+                {% endif %}
+                <h1 class="page__title">{{post.title}}</h1>
+                <div class="page__body">
+                    {{post.content}}
+                </div>
+            </section>
+        </article>
+    </div><!-- /content-wrapper -->
+{% endblock %}
