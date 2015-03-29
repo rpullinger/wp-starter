@@ -18,6 +18,17 @@ class StarterSite extends TimberSite {
         add_action( 'init', array( $this, 'register_post_types' ) );
         add_action( 'init', array( $this, 'register_taxonomies' ) );
 
+
+        update_option('thumbnail_size_w', 500);
+        update_option('thumbnail_size_h', 9999);
+        update_option('thumbnail_crop', false);
+        update_option('medium_size_w', 1000);
+        update_option('medium_size_h', 9999);
+        update_option('large_size_w', 1600);
+        update_option('large_size_h', 9999);
+        add_image_size('small', 700, 9999);
+        add_image_size('full', 2400, 9999);
+
         $args = array(
             'search-form',
             'comment-form',
@@ -34,7 +45,7 @@ class StarterSite extends TimberSite {
         // Figures round images on upload
         function html5_insert_image($html, $id, $caption, $title, $align, $url, $size, $alt) {
             $html5 = "<figure class='trip__image trip__image--$size trip__image--align-$align'>";
-            $html5 .= "<img src='$url' alt='$alt' />";
+            $html5 .= wp_get_attachment_image( $id, 'large' );
             if ($caption) {
                 $html5 .= "<figcaption class='trip__image-caption'>$caption</figcaption>";
             }
@@ -52,7 +63,7 @@ class StarterSite extends TimberSite {
             $ids = explode(',', $atts['ids']);
             foreach($ids as $image){
                 $output .= '<div class="gallery-item">';
-                $output .= wp_get_attachment_image( $image, $atts['size'] );
+                $output .= wp_get_attachment_image( $image, 'medium' );
                 $output .= '</div>';
             }
             $output .= '</div></div>';
@@ -76,6 +87,33 @@ class StarterSite extends TimberSite {
             register_taxonomy_for_object_type( 'category', 'attachment' );
         }
         add_action( 'init' , 'wptp_add_categories_to_attachments' );
+
+        add_filter( 'jpeg_quality', create_function( '', 'return 40;' ) );
+
+        function replace_uploaded_image($image_data) {
+            // if there is no large image : return
+            if (!isset($image_data['sizes']['full'])) return $image_data;
+
+            // paths to the uploaded image and the full image
+            $upload_dir = wp_upload_dir();
+            $uploaded_image_location = $upload_dir['basedir'] . '/' .$image_data['file'];
+            $full_image_location = $upload_dir['path'] . '/'.$image_data['sizes']['full']['file'];
+
+            // delete the uploaded image
+            unlink($uploaded_image_location);
+
+            // rename the full image
+            rename($full_image_location,$uploaded_image_location);
+
+            // update image metadata and return them
+            $image_data['width'] = $image_data['sizes']['full']['width'];
+            $image_data['height'] = $image_data['sizes']['full']['height'];
+            unset($image_data['sizes']['full']);
+
+            return $image_data;
+        }
+
+        add_filter('wp_generate_attachment_metadata','replace_uploaded_image');
 
         parent::__construct();
 

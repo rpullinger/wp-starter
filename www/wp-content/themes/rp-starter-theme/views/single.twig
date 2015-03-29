@@ -5,7 +5,7 @@
         <section>
             <header class="trip__header">
                 <p class="trip__featured-image">
-                    <img src="{{post.thumbnail.src}}" alt="{{post.thumbnail.alt}}">
+                    <img src="{{post.thumbnail.src('full')}}" alt="{{post.thumbnail.alt}}">
                 </p>
                 <div class="trip__info-wrapper">
                     <div class="trip__country-outline">{{country_outline}}</div>
@@ -20,22 +20,22 @@
             </header>
 
             <div class="trip__content">
-                <p class="trip__strapline">{{post.get_field('strapline')}}</p>
+                <!-- <p class="trip__strapline">{{post.get_field('strapline')}}</p> -->
                 {{post.content}}
 
             </div>
             <footer>
                 <div class="trip__footer">
+                    <h2>Related trips</h2>
                     <div class="g">
                         {% if post.next %}
                         <div class="gi">
                             <div class="trip-meta">
                                 <a href="{{post.next.link}}">
-                                    <h3 class="trip-meta__title">Next</h3>
-                                    <img class="trip-meta__image" src="{{post.next.thumbnail.src}}" alt="{{post.next.thumbnail.alt}}">
+                                    <h3 class="trip-meta__title">{{ post.next.get_terms('country') | join }}</h3>
+                                    <img class="trip-meta__image" src="{{post.next.thumbnail.src('medium')}}" alt="{{post.next.thumbnail.alt}}">
                                     <div class="trip-meta__box">
                                         <div class="trip-meta--info">
-                                            <div class="trip-meta__country">{{ post.next.get_terms('country') | join }}</div>
                                             <div class="trip-meta__location">{{post.next.title}}</div>
                                         </div>
                                     </div>
@@ -48,11 +48,10 @@
                         <div class="gi">
                             <div class="trip-meta">
                                 <a href="{{post.prev.link}}">
-                                    <h3 class="trip-meta__title">Previous</h3>
-                                    <img class="trip-meta__image" src="{{post.prev.thumbnail.src}}" alt="{{post.prev.thumbnail.alt}}">
+                                    <h3 class="trip-meta__title">{{ post.prev.get_terms('country') | join }}</h3>
+                                    <img class="trip-meta__image" src="{{post.prev.thumbnail.src('medium')}}" alt="{{post.prev.thumbnail.alt}}">
                                     <div class="trip-meta__box">
                                         <div class="trip-meta--info">
-                                            <div class="trip-meta__country">{{ post.prev.get_terms('country') | join }}</div>
                                             <div class="trip-meta__location">{{post.prev.title}}</div>
                                         </div>
                                     </div>

@@ -8,6 +8,20 @@
         <p class="trip-teaser__date">
             {{post.get_field('from') | date("jS M Y")}} – {{post.get_field('to') | date("jS M Y")}}
         </p>
-        <p class="trip-teaser__strapline">{{post.get_field('strapline')}}</p>
+        <!-- <p class="trip-teaser__strapline">{{post.get_field('strapline')}}</p> -->
     </a>
 </article>
+
+
+<!-- <div class="trip-meta">
+    <a href="{{post.link}}">
+        <h3 class="trip-meta__title">{{ post.get_terms('country') | join }}</h3>
+        <img class="trip-meta__image" src="{{post.thumbnail.src('medium')}}" alt="{{post.thumbnail.alt}}">
+        <div class="trip-meta__box">
+            <div class="trip-meta--info">
+                <div class="trip-meta__location">{{post.title}}</div>
+            </div>
+        </div>
+        <p class="trip-meta__date">{{post.get_field('from') | date("jS F Y")}} &mdash; {{post.get_field('to') | date("jS F Y")}}</p>
+    </a>
+</div> -->
