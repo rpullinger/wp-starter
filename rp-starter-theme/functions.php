@@ -143,7 +143,7 @@ class StarterSite extends TimberSite {
             ),
 
             'rewrite' => array(
-                'slug' => 'in',
+                'slug' => 'countries',
                 'with_front' => false,
                 'hierarchical' => true
             )
