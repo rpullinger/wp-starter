@@ -26,10 +26,10 @@
             </div>
             <footer>
                 <div class="trip__footer">
-                    <h2>Related trips</h2>
                     <div class="g">
                         {% if post.next %}
                         <div class="gi">
+                            <h4>Next</h4>
                             <div class="trip-meta">
                                 <a href="{{post.next.link}}">
                                     <h3 class="trip-meta__title">{{ post.next.get_terms('country') | join }}</h3>
@@ -46,6 +46,7 @@
                         {% endif %}
                         {% if post.prev %}
                         <div class="gi">
+                            <h4>Previous</h4>
                             <div class="trip-meta">
                                 <a href="{{post.prev.link}}">
                                     <h3 class="trip-meta__title">{{ post.prev.get_terms('country') | join }}</h3>
