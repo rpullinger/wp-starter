@@ -21,7 +21,8 @@
         "wpackagist-plugin/advanced-custom-fields": "dev-trunk",
         "wp-sync-db/wp-sync-db": "dev-master",
         "wpackagist-plugin/force-regenerate-thumbnails": "2.0.3",
-	    "wpackagist-plugin/timber-library": "dev-trunk"
+	    "wpackagist-plugin/timber-library": "dev-trunk",
+        "wpackagist-plugin/wordpress-seo": "2.0"
     },
     "extra": {
         "installer-paths": {

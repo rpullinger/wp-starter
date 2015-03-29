@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c411475ebc873b73a6e569c7858f6a73",
+    "hash": "56e76e200f71b2aa6ff2443bd0661fcb",
     "packages": [
         {
             "name": "composer/installers",
@@ -107,12 +107,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "ad64475321f890daca00bd0d5f551ece5a414672"
+                "reference": "16cc475122a426a625d941b655864eddb9fed32a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/ad64475321f890daca00bd0d5f551ece5a414672",
-                "reference": "ad64475321f890daca00bd0d5f551ece5a414672",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/16cc475122a426a625d941b655864eddb9fed32a",
+                "reference": "16cc475122a426a625d941b655864eddb9fed32a",
                 "shasum": ""
             },
             "require": {
@@ -136,7 +136,7 @@
                 "blog",
                 "cms"
             ],
-            "time": "2015-03-28 22:17:49"
+            "time": "2015-03-29 12:33:17"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -276,6 +276,26 @@
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/timber-library/",
             "time": "2015-03-09 16:29:51"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "2.0",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "tags/2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
         }
     ],
     "packages-dev": [],

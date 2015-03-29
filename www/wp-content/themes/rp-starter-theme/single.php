@@ -7,7 +7,7 @@
 $context = Timber::get_context();
 $post = Timber::query_post();
 $context['post'] = $post;
-$context['wp_title'] .= ' - ' . $post->title();
+// $context['wp_title'] .= ' - ' . $post->title();
 
 $id = $post->get_terms('country')[0]->description;
 $image = new TimberImage($id);

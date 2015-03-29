@@ -23,7 +23,7 @@ gulp.task('minify', function() {
         .pipe(gulp.dest('www/wp-content/themes/rp-starter-theme/css'))
 });
 
-gulp.task('deploy', function() {
+gulp.task('deploy', ['minify'], function() {
     return gulp.src('www/wp-content/themes/**/*')
         .pipe(ghPages({
             branch: 'staging'
