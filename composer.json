@@ -20,7 +20,7 @@
         "composer/installers": "~1.0.12",
         "wpackagist-plugin/advanced-custom-fields": "dev-trunk",
         "wp-sync-db/wp-sync-db": "dev-master",
-	"wpackagist-plugin/taxonomy-meta": "1.2",
+	"wpackagist-plugin/force-regenerate-thumbnails": "2.0.3",	
 	"jarednova/timber": "dev-master"
     },
     "extra": {

@@ -1,10 +1,21 @@
 .trip{
-    padding-left: $base-unit;
-    padding-right: $base-unit;
+
+    padding-left: $base-unit / 2;
+    padding-right: $base-unit / 2;
+
+    @include breakpoint($l-small){
+        padding-left: $base-unit;
+        padding-right: $base-unit;
+    }
 
     &__header{
         text-align: center;
-        margin-bottom: $base-unit * 4;
+        margin-bottom: $base-unit * 3;
+
+        font-size: $f-small;
+        @include breakpoint($l-small){
+            margin-bottom: $base-unit * 6;
+        }
     }
 
         &__info-wrapper{
@@ -27,7 +38,6 @@
             position: absolute;
             bottom: 0;
             left: 50%;
-            right: 0;
             transform: translate(-50%, 20%);
             opacity: 1;
             width: 100%;
@@ -39,13 +49,16 @@
             svg path,
             svg line{
                 stroke: #000;
-                fill: red;
                 stroke-width: 20px;
             }
         }
 
         &__location{
-            font-size: $f-xlarge;
+            font-size: $f-large;
+            @include breakpoint($l-small){
+                font-size: $f-xlarge;
+            }
+
             margin-bottom: $base-unit / 4;
             padding: 0 5px;
             line-height: 1;
@@ -57,14 +70,22 @@
             font-family: "proxima-nova", Helvetica, san-serif;
             font-size: $f-base;
             margin-bottom: 0;
-            font-size: $f-regular;
             line-height: 1;
+
+            font-size: $f-small;
+            @include breakpoint($l-small){
+                font-size: $f-regular;
+            }
         }
 
         &__date{
             margin-bottom: $base-unit / 2;
             font-weight: bold;
-            font-size: $f-regular;
+
+            font-size: $f-small;
+            @include breakpoint($l-small){
+                font-size: $f-regular;
+            }
         }
 
         &__strapline{
@@ -77,9 +98,16 @@
             margin: 0 auto;
 
             > *{
-                max-width: 35rem;
+                max-width: 42rem;
                 margin-left: auto;
                 margin-right: auto;
+                // margin-bottom: $base-unit;
+                font-size: 18px;
+            }
+
+            h3{
+                font-size: 24px;
+                margin-top: $base-unit * 4;
             }
         }
 
@@ -87,8 +115,8 @@
             padding: 0;
 
             &--thumbnail{ max-width: 35rem; }
-            &--medium{ max-width: 35rem; }
-            &--large{ max-width: 47rem; }
+            &--medium{ max-width: 42rem; }
+            &--large{ max-width: 42rem; }
             &--full{ max-width: 100%; }
         }
 
@@ -103,13 +131,16 @@
         }
 
         footer{
+            //background: #eeeeee;
+            // padding: $base-unit;
             margin-top: $base-unit * 2;
-            background: #eeeeee;
-            padding: $base-unit;
+            //margin-left: -$base-unit;
+            //margin-right: -$base-unit;
+            //width: 100vw;
         }
 
         &__footer{
-            max-width: 35em;
+            max-width: 42em;
             margin: 0 auto;
         }
 }

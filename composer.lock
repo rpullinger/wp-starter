@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d466948d8545bef45f4195a9f217f557",
+    "hash": "b01d07b97142b8a8da538e2ecba59833",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -264,12 +264,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "a938e594723a82dcb978d8f15179932f03162569"
+                "reference": "ffc7119493fb6222d68f8bb37347b1e48e826adc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/a938e594723a82dcb978d8f15179932f03162569",
-                "reference": "a938e594723a82dcb978d8f15179932f03162569",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/ffc7119493fb6222d68f8bb37347b1e48e826adc",
+                "reference": "ffc7119493fb6222d68f8bb37347b1e48e826adc",
                 "shasum": ""
             },
             "require": {
@@ -293,7 +293,7 @@
                 "blog",
                 "cms"
             ],
-            "time": "2015-03-28 02:18:03"
+            "time": "2015-03-28 21:18:37"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -502,16 +502,16 @@
             "time": "2015-03-18 04:46:15"
         },
         {
-            "name": "wpackagist-plugin/taxonomy-meta",
-            "version": "1.2",
+            "name": "wpackagist-plugin/force-regenerate-thumbnails",
+            "version": "2.0.3",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/taxonomy-meta/",
-                "reference": "tags/1.2"
+                "url": "http://plugins.svn.wordpress.org/force-regenerate-thumbnails/",
+                "reference": "tags/2.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/taxonomy-meta.1.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/force-regenerate-thumbnails.2.0.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -519,7 +519,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/taxonomy-meta/"
+            "homepage": "https://wordpress.org/plugins/force-regenerate-thumbnails/"
         }
     ],
     "packages-dev": [],

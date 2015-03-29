@@ -9,7 +9,7 @@
 
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -17,5 +17,13 @@
         padding-top: $base-unit;
         padding-left: $base-unit;
         display: block;
-        flex: 0 0 50%;
+        @include breakpoint($l-small){
+            flex: 0 0 50%;
+        }
+    }
+
+    .gi--one-third{
+        @include breakpoint($l-small){
+            flex: 0 0 33.3333%;
+        }
     }

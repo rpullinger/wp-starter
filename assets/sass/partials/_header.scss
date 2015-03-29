@@ -10,7 +10,11 @@
     margin-bottom: $base-unit * 2;
 
     &__logo{
-        font-size: $f-large;
+        font-size: $f-medium;
+
+        @include breakpoint($l-medium){
+            font-size: $f-medium;
+        }
         font-family: "leitura-news", Georgia, serif;
         font-weight: 700;
         margin-bottom: $base-unit / 2;
