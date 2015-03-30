@@ -20,6 +20,8 @@
 
         &__info-wrapper{
             position: relative;
+            max-width: 42em;
+            margin: 0 auto;
         }
 
         &__info{
@@ -30,7 +32,6 @@
                         1px -1px #fff,
                         -1px -1px #fff,
                         -1px 1px #fff;
-            // -webkit-text-stroke: 1px  #fff;
 
         }
 
@@ -41,9 +42,17 @@
             transform: translate(-50%, 20%);
             opacity: 1;
             width: 100%;
-            max-width: 35rem;
-            //z-index: -1000;
             pointer-events: none;
+            height: 0;
+            padding-bottom: 100%;
+
+            svg{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
 
 
             svg path,
