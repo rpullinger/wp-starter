@@ -436,7 +436,9 @@ hr {
       .trip__header {
         margin-bottom: 144px; } }
   .trip__info-wrapper {
-    position: relative; }
+    position: relative;
+    max-width: 42em;
+    margin: 0 auto; }
   .trip__info {
     z-index: 100;
     position: relative;
@@ -450,8 +452,15 @@ hr {
             transform: translate(-50%, 20%);
     opacity: 1;
     width: 100%;
-    max-width: 35rem;
-    pointer-events: none; }
+    pointer-events: none;
+    height: 0;
+    padding-bottom: 100%; }
+    .trip__country-outline svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
     .trip__country-outline svg path, .trip__country-outline svg line {
       stroke: #000;
       stroke-width: 20px; }
