@@ -22,12 +22,16 @@
         padding-left: $base-unit;
         display: block;
         @include breakpoint($l-small){
-            flex: 0 0 50%;
+            width: 50%;
         }
     }
 
     .gi--one-third{
         @include breakpoint($l-small){
-            flex: 0 0 33.3333%;
+            width: 50%;
+        }
+
+        @include breakpoint($l-medium){
+            width: 33.3333%;
         }
     }

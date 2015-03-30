@@ -41,7 +41,8 @@ gulp.task('default', ['sass'], function() {
 
     browserSync({
         proxy: "http://letsgetlost.dev:8080",
-        xip: true
+        xip: true,
+        tunnel: "letsgetlost"
     });
 
     gulp.watch('assets/sass/**/*', ['sass']);
